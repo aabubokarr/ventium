@@ -1,10 +1,6 @@
-from os import read
-
-
 def convertBinToHex(bin):
     hexval = hex(int(bin, 2))[2:]
     return hexval
-
 
 def convertOpcode(op):
     opcodeDict = {
@@ -26,7 +22,6 @@ def convertOpcode(op):
     }
     return opcodeDict[op]
 
-
 def convertFunctionBits(funcBits):
     functionDict = {
         "add": "0000",
@@ -41,13 +36,11 @@ def convertFunctionBits(funcBits):
     }
     return functionDict[funcBits]
 
-
 def checkRegister(reg):
     registerNum = int(reg[1:])
     if registerNum > 21:
         print("Invalid register")
     return format(registerNum, "04b")
-
 
 rtypeInstructions = [
     "add",
